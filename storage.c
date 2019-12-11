@@ -47,10 +47,13 @@ static void printStorageInside(int x, int y) {
 }
 
 //initialize the storage
-//set all the member variable as an initial value
+//set all the member variable as an initial value 
 //and allocate memory to the context pointer
 //int x, int y : cell coordinate to be initialized
 static void initStorage(int x, int y) {
+
+
+//initialize the storage
 
 	int building =0;
 	int room=0;
@@ -98,19 +101,36 @@ static int inputPasswd(int x, int y) {
 //return : 0 - backup was successfully done, -1 - failed to backup
 int str_backupSystem(char* filepath) {
 	
+	
+	
+	
 }
 
 
-
+//메모리 할당 
 //create delivery system on the double pointer deliverySystem
 //char* filepath : filepath and name to read config parameters (row, column, master password, past contexts of the delivery system
 //return : 0 - successfully created, -1 - failed to create the system
 int str_createSystem(char* filepath) {
 	
+	int i;
+	storage_t** deliverySystem;
+	
+	deliverySystem = (stoage_t**)malloc x*sizeof(storage_t*);
+	for(i=0;i<x;i++)
+		deliverySystem[i] = (storage_t*)malloc(y*sizeof(storage_t));
+	
+	
+	 
 }
 
+
+//메모리 해제 
 //free the memory of the deliverySystem 
 void str_freeSystem(void) {
+	
+	int *deliverySystem;
+	
 	
 }
 
