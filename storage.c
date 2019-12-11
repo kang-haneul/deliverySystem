@@ -198,6 +198,14 @@ int str_checkStorage(int x, int y) {
 //return : 0 - successfully put the package, -1 - failed to put
 int str_pushToStorage(int x, int y, int nBuilding, int nRoom, char msg[MAX_MSG_SIZE+1], char passwd[PASSWD_LEN+1]) {
 	
+	storage_t.building = ;
+	
+	
+	
+	
+	
+	
+	
 }
 
 
@@ -208,6 +216,11 @@ int str_pushToStorage(int x, int y, int nBuilding, int nRoom, char msg[MAX_MSG_S
 //return : 0 - successfully extracted, -1 = failed to extract
 int str_extractStorage(int x, int y) {
 	
+	
+	
+	
+	
+	
 }
 
 //find my package from the storage
@@ -215,6 +228,11 @@ int str_extractStorage(int x, int y) {
 //int nBuilding, int nRoom : my building/room numbers
 //return : number of packages that the storage system has
 int str_findStorage(int nBuilding, int nRoom) {
+	
+	
+	
+	
+	
 	
 	return cnt;
 }
