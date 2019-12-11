@@ -19,7 +19,7 @@ typedef struct {
 	char passwd[PASSWD_LEN+1];
 	
 	char *context;
-} storage_t;
+} storage_t;  // 위의 구조체들의 변수들을 모두 srorage_t에 넣었다는 의미. 즉 stroage_t를 출력하면 저 위의 구조체가 나온다. 포인터야  
 
 
 static storage_t** deliverySystem; 			//deliverySystem
@@ -51,7 +51,7 @@ static void printStorageInside(int x, int y) {
 //and allocate memory to the context pointer
 //int x, int y : cell coordinate to be initialized
 static void initStorage(int x, int y) {
-	int s[N][M]; //N개의 동 M개의 호
+
 	 
 }
 
