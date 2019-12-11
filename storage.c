@@ -113,12 +113,7 @@ int str_backupSystem(char* filepath) {
 //return : 0 - successfully created, -1 - failed to create the system
 int str_createSystem(char* filepath) {
 	
-	int i;
-	storage_t** deliverySystem;
 	
-	deliverySystem = (stoage_t**)malloc x*sizeof(storage_t*);
-	for(i=0;i<x;i++)
-		deliverySystem[i] = (storage_t*)malloc(y*sizeof(storage_t));
 	
 	
 	 
@@ -129,7 +124,16 @@ int str_createSystem(char* filepath) {
 //free the memory of the deliverySystem 
 void str_freeSystem(void) {
 	
-	int *deliverySystem;
+	int i;	
+	storage_t** deliverySystem;
+	
+	deliverySystem = (stoage_t**)malloc x*sizeof(storage_t*);
+	for(i=0;i<x;i++)
+		deliverySystem[i] = (storage_t*)malloc(y*sizeof(storage_t));
+		
+	for(i=0;i<x;i++)
+		free(deliverySystem[i]);
+	free(deliverySystem);
 	
 	
 }
