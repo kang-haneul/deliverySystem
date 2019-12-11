@@ -52,6 +52,17 @@ static void printStorageInside(int x, int y) {
 //int x, int y : cell coordinate to be initialized
 static void initStorage(int x, int y) {
 
+	int building =0;
+	int room=0;
+	int cnt =0;
+	char passwd[]= masterPassword; 
+	char *context = NULL; //set all the member variable as an initial value
+	
+	//and allocate memory to the context pointer
+	
+	int x=0;
+	int y=0; //int x, int y : cell coordinate to be initialized
+	
 	 
 }
 
@@ -59,6 +70,20 @@ static void initStorage(int x, int y) {
 //int x, int y : cell for password check
 //return : 0 - password is matching, -1 - password is not matching
 static int inputPasswd(int x, int y) {
+	
+	int storage_t** deliverySystem;
+	
+
+	char input_passwd[];
+	input_passwd = (char)getIntegerInput(); //input password
+	
+	
+	if(input_passwd=passwd) //password is matching
+		return 0;
+
+	else 					// password is not matching
+		return -1;
+	
 	
 }
 
