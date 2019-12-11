@@ -51,7 +51,8 @@ static void printStorageInside(int x, int y) {
 //and allocate memory to the context pointer
 //int x, int y : cell coordinate to be initialized
 static void initStorage(int x, int y) {
-	
+	int s[N][M]; //N개의 동 M개의 호
+	 
 }
 
 //get password input and check if it is correct for the cell (x,y)
