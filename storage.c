@@ -242,12 +242,18 @@ int str_checkStorage(int x, int y) {
 //return : 0 - successfully put the package, -1 - failed to put
 int str_pushToStorage(int x, int y, int nBuilding, int nRoom, char msg[MAX_MSG_SIZE+1], char passwd[PASSWD_LEN+1]) {
 	
+	str_checkStorage(x,y);
+	
+	
+	
+	
 	struct storage_t.[x][y]; //int x, int y : coordinate of the cell to put the package
 	
 	[x][y].building = nBuilding;
 	[x][y].room=nRoom;						//	int nBuilding, int nRoom : building and room numbers of the destination
 	strcpy([x][y].msg,&char msg[]);			//char msg[] : package context (message string)
-	strcpy([x][y].msg,&char passwd[]);		//char passwd[] : password string (4 characters)
+	strcpy([x][y].passwd,&char passwd[]);		//char passwd[] : password string (4 characters)
+	
 	
 	 storage_t.[x][y];
 	 
@@ -271,10 +277,33 @@ int str_pushToStorage(int x, int y, int nBuilding, int nRoom, char msg[MAX_MSG_S
 //return : 0 - successfully extracted, -1 = failed to extract
 int str_extractStorage(int x, int y) {
 	
+	int x,y; //coordinate of the cell to extract
+	char passwd[4];
+		
+	printf("input your coordinate(x y): ");
+	scanf("%d%d",&x&y);
 	
+	storage_t.[x][y];
 	
+	printf("input password(4 characters): ");
+	scanf("%4s",passwd[]);
 	
+	if(storage_t.passwd==passwd[])
+		{
+			printf("%100s",storage_t.msg);
+			
+			initStorage;
+			
+			return 0; //sucessfully extract
+			
+			}	
 	
+	else
+		{
+			printf("wrong");
+			
+			return -1;  //failed to extract
+		}
 	
 }
 
