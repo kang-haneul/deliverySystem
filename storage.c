@@ -126,6 +126,8 @@ int str_backupSystem(char* filepath) {
 int str_createSystem(char* filepath) {
 	
 	int i;
+	FILE* fp;
+	char buffer[100];
 	
 	int **deliverySystem
 	deliverySystem=(int**)malloc(sizeof(int*)*x);
@@ -143,6 +145,20 @@ int str_createSystem(char* filepath) {
 	 
 	 free(deliverySystem);  //create delivery system on the double pointer deliverySystem
 	 
+
+	FILE *fp=fopen("const char* filepath","r");
+	
+	fgets(buffer,sizeof(buffer),fp);
+	
+	if(fp==NULL)
+		{
+			return -1; //failed to creat the system
+		}
+	
+	fclose(fp); //file path and name to read 
+	
+	return 0; //successfully created
+	
 	 
 	 
 }
