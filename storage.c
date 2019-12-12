@@ -244,9 +244,6 @@ int str_pushToStorage(int x, int y, int nBuilding, int nRoom, char msg[MAX_MSG_S
 	
 	str_checkStorage(x,y);
 	
-	
-	
-	
 	struct storage_t.[x][y]; //int x, int y : coordinate of the cell to put the package
 	
 	[x][y].building = nBuilding;
@@ -277,6 +274,10 @@ int str_pushToStorage(int x, int y, int nBuilding, int nRoom, char msg[MAX_MSG_S
 //return : 0 - successfully extracted, -1 = failed to extract
 int str_extractStorage(int x, int y) {
 	
+	
+	str_checkStorage(x,y); //show the situatiom
+		
+		
 	int x,y; //coordinate of the cell to extract
 	char passwd[4];
 		
@@ -313,10 +314,41 @@ int str_extractStorage(int x, int y) {
 //return : number of packages that the storage system has
 int str_findStorage(int nBuilding, int nRoom) {
 	
+	str_checkStorage(x,y); //print all the cells (x,y) which has my package
 	
 	
+	return cnt; ////return : number of packages that the storage system has
 	
 	
-	
-	return cnt;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
