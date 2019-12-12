@@ -242,11 +242,22 @@ int str_checkStorage(int x, int y) {
 //return : 0 - successfully put the package, -1 - failed to put
 int str_pushToStorage(int x, int y, int nBuilding, int nRoom, char msg[MAX_MSG_SIZE+1], char passwd[PASSWD_LEN+1]) {
 	
-	storage_t.building = ;
+	struct storage_t.[x][y]; //int x, int y : coordinate of the cell to put the package
 	
+	[x][y].building = nBuilding;
+	[x][y].room=nRoom;						//	int nBuilding, int nRoom : building and room numbers of the destination
+	strcpy([x][y].msg,&char msg[]);			//char msg[] : package context (message string)
+	strcpy([x][y].msg,&char passwd[]);		//char passwd[] : password string (4 characters)
 	
-	
-	
+	 storage_t.[x][y];
+	 
+	 if( storage_t.[x][y] ==NULL) //fail to put
+	 	{
+	 		return -1;
+		 }
+		 
+		 
+	 return 0; //sucessfully put
 	
 	
 	
