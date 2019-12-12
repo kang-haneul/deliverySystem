@@ -101,9 +101,21 @@ static int inputPasswd(int x, int y) {
 //return : 0 - backup was successfully done, -1 - failed to backup
 int str_backupSystem(char* filepath) {
 	
+	FILE* fp;
+	
+	fp=fopen("const char* filepath","w"); //char* filepath : filepath and name to write
 	
 	
+	if (fp ==NULL)
+		{
+			return -1; // fail to backup
+		}
 	
+	
+	fclose(fp);
+	
+	
+	retrun 0; //sucessfully backup
 }
 
 
@@ -114,7 +126,21 @@ int str_backupSystem(char* filepath) {
 int str_createSystem(char* filepath) {
 	
 	
+	fp=fopen("const char* filepath","w"); //char* filepath : filepath and name to write
 	
+	
+	if (fp ==NULL)
+		{
+			return -1; // fail to backup
+		}
+	
+	
+	
+	
+	fclose(fp);
+	
+	
+	retrun 0; //sucessfully backup
 	
 	 
 }
