@@ -125,23 +125,25 @@ int str_backupSystem(char* filepath) {
 //return : 0 - successfully created, -1 - failed to create the system
 int str_createSystem(char* filepath) {
 	
+	int i;
 	
-	fp=fopen("const char* filepath","w"); //char* filepath : filepath and name to write
+	int **deliverySystem
+	deliverySystem=(int**)malloc(sizeof(int*)*x);
 	
-	
-	if (fp ==NULL)
+	for(i=0;i<x;i++)
 		{
-			return -1; // fail to backup
+			deliverySystem[i] = (int*)malloc(sizwof(int)*y);
+			
 		}
 	
-	
-	
-	
-	fclose(fp);
-	
-	
-	retrun 0; //sucessfully backup
-	
+	 for(i=0;i<x;i++)
+	 	{
+	 		free(deliveryStstem[i]);
+		 }
+	 
+	 free(deliverySystem);  //create delivery system on the double pointer deliverySystem
+	 
+	 
 	 
 }
 
